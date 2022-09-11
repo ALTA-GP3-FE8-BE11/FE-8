@@ -22,7 +22,7 @@ const Footer = () => {
                                 <Link to='/' style={{color: 'white', textDecoration:'none'}}>Staff</Link>
                             </div>
                             <div style={{marginLeft: '10px'}}>
-                                <Link to='/' style={{color: 'white', textDecoration:'none'}}>Staff</Link>
+                                <Link to='/contactus' style={{color: 'white', textDecoration:'none'}}>Contact Us</Link>
                             </div>
                         </div>
                     </Col>
