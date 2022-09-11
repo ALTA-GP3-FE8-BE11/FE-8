@@ -26,7 +26,7 @@ const NavbarNav = () => {
                     />
                     <Button variant="secondary" style={{marginRight:'30px'}}>Search</Button>
                     <Button variant='secondary' className='button-nav' style={{marginRight: '10px', backgroundColor: 'none'}}>
-                        <FontAwesomeIcon icon={faUserCircle}></FontAwesomeIcon>
+                        <Link to='/login'><FontAwesomeIcon icon={faUserCircle}></FontAwesomeIcon></Link>
                     </Button>
                     <Button variant="secondary">
                         <FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon>
