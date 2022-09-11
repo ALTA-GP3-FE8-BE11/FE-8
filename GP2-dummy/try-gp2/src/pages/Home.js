@@ -1,21 +1,24 @@
-import React from 'react'
-import Cards from '../component/card'
-import Footer from '../component/footer'
-import NavbarNav from '../component/navbar'
-import { Tab, Tabs } from "react-bootstrap";
+import React from "react";
+import Footer from "../component/footer";
+import NavbarNav from "../component/navbar";
+import Jumbotrons from "../component/jumbotron";
+import Carousels from "../component/carousel";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Home = () => {
   return (
-    <div>
+    <>
+      <div className="" style={{ backgroundColor: "#DCDCDC" }}>
         <NavbarNav />
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
+        <Jumbotrons />
+        <Carousels />
+        <a style={{ fontSize: "1.5vw", marginLeft: "40%" }}>
+          Klik disini untuk produk lainnya 🏹
+        </a>
         <Footer />
-    </div>
-  )
-}
+      </div>
+    </>
+  );
+};
 
-export default Home
+export default Home;
