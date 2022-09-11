@@ -15,7 +15,7 @@ const NavbarNav = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto d-flex gap-3">
                     <Link className='text-decoration-none text-white ' to='/'>Home</Link>
-                    <Link to='/' className='text-decoration-none text-white'>Product</Link>
+                    <Link to='/product' className='text-decoration-none text-white'>Product</Link>
                 </Nav>
                 <Form className="d-flex">
                     <Form.Control

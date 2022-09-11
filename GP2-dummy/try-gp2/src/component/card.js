@@ -7,7 +7,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 const Cards = () => {
   return (
     <div>
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '15rem' }}>
             <Card.Img variant="top" style={{borderColor: 'gray'}} src={sepatu} />
             <Card.Body style={{borderColor:'gray'}}>
                 <Card.Title>Nike Aja Ini Mah</Card.Title>
