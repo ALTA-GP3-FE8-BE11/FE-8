@@ -11,7 +11,7 @@ import sepatu from "../assets/sepatu.png";
 const Cards = () => {
   return (
     <div>
-      <Card style={{ width: "18rem", marginTop: "2vw", marginLeft: "2vw" }}>
+      <Card style={{ width: "14rem", marginTop: "2vw", marginLeft: "2vw" }}>
         <Card.Img variant="top" style={{ borderColor: "gray" }} src={sepatu} />
         <Card.Body style={{ borderColor: "gray" }}>
           <Card.Title>Nike Aja Ini Mah</Card.Title>
