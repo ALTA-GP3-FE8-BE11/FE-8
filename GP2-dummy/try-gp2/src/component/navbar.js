@@ -9,7 +9,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import logo from "../assets/logo.png";
 
-
 const NavbarNav = () => {
   return (
     <div>
@@ -21,7 +20,6 @@ const NavbarNav = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto d-flex gap-3">
-
               <Link
                 className="text-decoration-none text-white  "
                 style={{ marginLeft: "10vw", fontSize: "2vw" }}
@@ -30,11 +28,10 @@ const NavbarNav = () => {
                 Home
               </Link>
               <Link
-                to="/"
+                to="/Product"
                 className="text-decoration-none text-white"
                 style={{ fontSize: "2vw" }}
               >
-
                 Product
               </Link>
             </Nav>
