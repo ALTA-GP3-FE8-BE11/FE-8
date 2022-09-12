@@ -13,13 +13,10 @@ import logo from "../assets/logo.png";
 const NavbarNav = () => {
   return (
     <div>
-
       <Navbar expand="lg" className="nav-top ">
         <Container fluid>
           <Navbar.Brand href="#home" style={{ color: "whitesmoke" }}>
             <img src={logo} alt="horse" />
-
-
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
