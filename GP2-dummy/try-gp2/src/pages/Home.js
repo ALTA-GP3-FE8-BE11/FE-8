@@ -8,11 +8,7 @@ const Home = () => {
   return (
     <div>
         <NavbarNav />
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
+        
         <Footer />
     </div>
   )
