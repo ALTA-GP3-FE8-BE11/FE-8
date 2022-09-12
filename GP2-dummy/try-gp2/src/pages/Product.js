@@ -7,8 +7,11 @@ import '../style/productpage.css'
 
 const Product = () => {
   return (
-    <div>
+    <div >
         <NavbarNav />
+        <div className='d-flex justify-content-end px-5 pt-3'>
+            <Button variant='secondary'>History Cart</Button>
+        </div>
         <div className='container-fluid d-flex gap-3 p-3'>
             <Row className='w-100 pb-3 pt-3'>
                 <Col xs={12} md='2'>
