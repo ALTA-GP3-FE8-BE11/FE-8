@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Product from "./pages/Product";
 import Signup from "./pages/Signup";
+import Teams from "./pages/team";
 
 function App() {
   return (
