@@ -1,17 +1,21 @@
-import React from 'react'
-import Cards from '../component/card'
-import Footer from '../component/footer'
-import NavbarNav from '../component/navbar'
-import { Tab, Tabs } from "react-bootstrap";
+
+import Footer from "../component/footer";
+import NavbarNav from "../component/navbar";
+import Jumbotrons from "../component/jumbotron";
+import Carousels from "../component/carousel";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 const Home = () => {
   return (
-    <div>
+    <>
+      <div className="" style={{ backgroundColor: "#DCDCDC" }}>
         <NavbarNav />
         
         <Footer />
-    </div>
-  )
-}
+      </div>
+    </>
+  );
+};
 
-export default Home
+export default Home;

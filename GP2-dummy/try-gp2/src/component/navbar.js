@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
 import { Navbar, Container, Nav, Form, Button } from "react-bootstrap";
-import { Link } from 'react-router-dom';
-import '../style/navbar.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartShopping, faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import { Link } from "react-router-dom";
+import "../style/navbar.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCartShopping,
+  faUserCircle,
+} from "@fortawesome/free-solid-svg-icons";
+import logo from "../assets/logo.png";
 
 const NavbarNav = () => {
   return (
@@ -36,7 +40,7 @@ const NavbarNav = () => {
             </Container>
         </Navbar>
     </div>
-  )
-}
+  );
+};
 
-export default NavbarNav
+export default NavbarNav;
