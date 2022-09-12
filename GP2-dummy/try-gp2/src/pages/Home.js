@@ -5,6 +5,7 @@ import Jumbotrons from "../component/jumbotron";
 import Carousels from "../component/carousel";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+
 const Home = () => {
   return (
     <>

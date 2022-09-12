@@ -1,13 +1,14 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import HistoryCarts from "./pages/historyCart";
-import Home from "./pages/Home";
+import Teams from "./pages/team";
+
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path="/" element={<HistoryCarts />} />
+        <Route exact path="/" element={<Teams />} />
+
       </Routes>
     </BrowserRouter>
   );
