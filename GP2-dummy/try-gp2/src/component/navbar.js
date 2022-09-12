@@ -7,22 +7,37 @@ import {
   faCartShopping,
   faUserCircle,
 } from "@fortawesome/free-solid-svg-icons";
+import logo from "../assets/logo.png";
+
 
 const NavbarNav = () => {
   return (
     <div>
-      <Navbar expand="lg" className="nav-top" style={{ display: "sticky-top" }}>
+
+      <Navbar expand="lg" className="nav-top ">
         <Container fluid>
           <Navbar.Brand href="#home" style={{ color: "whitesmoke" }}>
-            React-Bootstrap
+            <img src={logo} alt="horse" />
+
+
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto d-flex gap-3">
-              <Link className="text-decoration-none text-white " to="/">
+
+              <Link
+                className="text-decoration-none text-white  "
+                style={{ marginLeft: "10vw", fontSize: "2vw" }}
+                to="/"
+              >
                 Home
               </Link>
-              <Link to="/" className="text-decoration-none text-white">
+              <Link
+                to="/"
+                className="text-decoration-none text-white"
+                style={{ fontSize: "2vw" }}
+              >
+
                 Product
               </Link>
             </Nav>

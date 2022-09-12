@@ -1,13 +1,15 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
-import sepatu from "../aassets/sepatu.png";
+import sepatu from "../assets/sepatu.png";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 const Cards = () => {
   return (
     <div>
-      <Card style={{ width: "18rem" }}>
+
+      <Card style={{ width: "18rem", marginTop: "2vw", marginLeft: "2vw" }}>
         <Card.Img variant="top" style={{ borderColor: "gray" }} src={sepatu} />
         <Card.Body style={{ borderColor: "gray" }}>
           <Card.Title>Nike Aja Ini Mah</Card.Title>
