@@ -1,15 +1,19 @@
 import React from "react";
 import Navbar from "../component/navbar";
 import Card from "react-bootstrap/Card";
-import Jar from "../assets/Jar.jpeg";
 import Team from "../component/team";
 import Teams2 from "../component/team2";
 import Footer from "../component/footer";
+
+import Jar from "../assets/Jar.jpeg";
+import dwi from "../assets/dwi.jpg";
+import zul from "../assets/zul.jpg";
+
 const Teams = () => {
   return (
     <>
-      <Navbar />
       <div style={{ backgroundColor: "#D9D9D9" }}>
+        <Navbar />
         <Team />
         <div
           style={{
@@ -32,7 +36,7 @@ const Teams = () => {
                 marginLeft: "5vw",
                 height: "60%",
                 width: "50%",
-                borderRadius: "50%",
+                borderRadius: "20%",
                 textAlign: "center",
               }}
               variant="top"
@@ -59,21 +63,21 @@ const Teams = () => {
           >
             <Card.Img
               style={{
-                marginLeft: "5vw",
+                marginLeft: "4vw",
                 height: "60%",
-                width: "50%",
-                borderRadius: "50%",
+                width: "55%",
+                borderRadius: "20%",
                 textAlign: "center",
               }}
               variant="top"
-              src={Jar}
+              src={zul}
             />
             <Card.Body>
               <Card.Title style={{ marginLeft: "2.5vw" }}>
-                Ganjar Widatama
+                Rofifatuz Zulfa
               </Card.Title>
               <Card.Text>
-                Belajar ngoding itu stres, tapi lebih stres ga ngapa-ngapain
+                kerja, kerja, main, tipes, kembali ke kata pertama.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -112,7 +116,7 @@ const Teams = () => {
         <div style={{ display: "flex", flexWrap: "wrap" }}>
           <Card
             style={{
-              marginTop: "5vw",
+              marginTop: "0vw",
               marginLeft: "25%",
               backgroundColor: "#D9D9D9",
               width: "18rem",
@@ -122,28 +126,28 @@ const Teams = () => {
           >
             <Card.Img
               style={{
+                marginTop: "2vw",
                 marginLeft: "5vw",
-                height: "60%",
-                width: "50%",
-                borderRadius: "50%",
+                height: "70%",
+                width: "60%",
+                borderRadius: "20%",
                 textAlign: "center",
               }}
               variant="top"
-              src={Jar}
+              src={dwi}
             />
             <Card.Body>
               <Card.Title style={{ marginLeft: "2.5vw" }}>
-                Ganjar Widatama
+                Muh Dwi Arifianto
               </Card.Title>
-              <Card.Text>
-                Belajar ngoding itu stres, tapi lebih stres ga ngapa-ngapain
-              </Card.Text>
+              <Card.Text>Jangan menyerah sebelum hari deadline</Card.Text>
             </Card.Body>
           </Card>
           <Card
             style={{
-              marginTop: "5vw",
+              marginTop: "2vw",
               marginLeft: "10%",
+              marginBottom: "5vw",
               backgroundColor: "#D9D9D9",
               width: "18rem",
               height: "14rem",
@@ -170,15 +174,6 @@ const Teams = () => {
               </Card.Text>
             </Card.Body>
           </Card>
-          {/* <Card
-            style={{
-              marginTop: "5vw",
-              marginLeft: "10%",
-              width: "18rem",
-              height: "14rem",
-              border: "0",
-            }}
-          ></Card> */}
         </div>
       </div>
       <Footer />
