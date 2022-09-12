@@ -1,9 +1,12 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 import sepatu from "../assets/sepatu.png";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
+
 
 const Cards = () => {
   return (
