@@ -8,7 +8,7 @@ import sepatu from "../assets/sepatu.png";
 
 
 
-const Cards = () => {
+const Cards = ({ handleDetailPage }) => {
   return (
     <div>
       <Card style={{ width: "14rem", marginTop: "2vw", marginLeft: "2vw" }}>
@@ -29,6 +29,7 @@ const Cards = () => {
               backgroundColor: "gray",
               borderColor: "gray",
             }}
+            onClick={handleDetailPage}
           >
             Product Details
           </Button>
