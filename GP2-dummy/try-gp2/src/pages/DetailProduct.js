@@ -2,7 +2,7 @@ import React from 'react';
 import { Col, Row, Card, Button } from 'react-bootstrap';
 import Footer from '../component/footer';
 import NavbarNav from '../component/navbar';
-import sepatu from '../component/sepatu.png';
+import sepatu from '../assets/sepatu.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 

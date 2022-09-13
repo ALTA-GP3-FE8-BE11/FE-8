@@ -2,7 +2,7 @@ import React from 'react';
 import { Col, Row, ListGroup, Card } from 'react-bootstrap';
 import Footer from '../component/footer';
 import NavbarNav from '../component/navbar';
-import sepatu from '../component/sepatu.png';
+import sepatu from '../assets/sepatu.png';
 import logoGoogle from '../assets/google.png';
 import logoFacebook from '../assets/facebook.png';
 import logoTwitter from '../assets/twitter.png';
