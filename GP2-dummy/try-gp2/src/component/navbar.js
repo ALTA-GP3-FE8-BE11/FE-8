@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar, Container, Nav, Form, Button } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../style/navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -11,13 +11,14 @@ import {
 import logo from "../assets/logo.png";
 
 const NavbarNav = () => {
-
   return (
     <div>
       <Navbar expand="lg" className="nav-top ">
         <Container fluid>
           <Navbar.Brand href="#home" style={{ color: "whitesmoke" }}>
-            <img src={logo} alt="horse" />
+            <Link to="/">
+              <img src={logo} alt="horse" />
+            </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -52,10 +53,20 @@ const NavbarNav = () => {
                 className="button-nav"
                 style={{ marginRight: "10px", backgroundColor: "none" }}
               >
-                <Link to='/login'><FontAwesomeIcon icon={faUserCircle} style={{ color: 'white' }}></FontAwesomeIcon></Link>
+                <Link to="/login">
+                  <FontAwesomeIcon
+                    icon={faUserCircle}
+                    style={{ color: "white" }}
+                  ></FontAwesomeIcon>
+                </Link>
               </Button>
               <Button variant="secondary">
-                <Link to='/mycart'><FontAwesomeIcon icon={faCartShopping} style={{ color: 'white' }}></FontAwesomeIcon></Link>
+                <Link to="/mycart">
+                  <FontAwesomeIcon
+                    icon={faCartShopping}
+                    style={{ color: "white" }}
+                  ></FontAwesomeIcon>
+                </Link>
               </Button>
             </Form>
           </Navbar.Collapse>

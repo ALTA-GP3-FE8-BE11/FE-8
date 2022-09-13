@@ -44,7 +44,7 @@ const Footer = () => {
                 <h5>Social</h5>
                 <div style={{ marginLeft: "10px" }}>
                   <Link
-                    to="/"
+                    to="https://www.kaskus.co.id/"
                     style={{ color: "white", textDecoration: "none" }}
                   >
                     Instagram
@@ -52,7 +52,7 @@ const Footer = () => {
                 </div>
                 <div style={{ marginLeft: "10px" }}>
                   <Link
-                    to="/"
+                    to="https://www.tiktok.com/id-ID/"
                     style={{ color: "white", textDecoration: "none" }}
                   >
                     Twitter

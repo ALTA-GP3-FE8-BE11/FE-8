@@ -1,13 +1,17 @@
-
 import React from "react";
 import { Button, Col, ListGroup, Row } from "react-bootstrap";
 import Cards from "../component/card";
 import Footer from "../component/footer";
 import NavbarNav from "../component/navbar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../style/productpage.css";
 
 const Product = () => {
+  const navigate = useNavigate();
+
+  const handleDetailPage = () => {
+    navigate("/detailproduct");
+  };
   return (
     <div>
       <NavbarNav />
@@ -28,14 +32,14 @@ const Product = () => {
           </Col>
           <Col xs={12} md="10">
             <div className="d-flex flex-wrap justify-content-center gap-3 container-content">
-              <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
+              <Cards handleDetailPage={() => handleDetailPage()} />
+              <Cards handleDetailPage={() => handleDetailPage()} />
+              <Cards handleDetailPage={() => handleDetailPage()} />
+              <Cards handleDetailPage={() => handleDetailPage()} />
+              <Cards handleDetailPage={() => handleDetailPage()} />
+              <Cards handleDetailPage={() => handleDetailPage()} />
+              <Cards handleDetailPage={() => handleDetailPage()} />
+              <Cards handleDetailPage={() => handleDetailPage()} />
             </div>
           </Col>
         </Row>
@@ -44,7 +48,5 @@ const Product = () => {
     </div>
   );
 };
-
-
 
 export default Product;
