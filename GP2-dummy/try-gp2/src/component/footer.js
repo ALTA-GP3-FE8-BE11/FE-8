@@ -23,7 +23,7 @@ const Footer = () => {
                 <h5>About</h5>
                 <div style={{ marginLeft: "10px" }}>
                   <Link
-                    to="/"
+                    to="/team"
                     style={{ color: "white", textDecoration: "none" }}
                   >
                     Staff
@@ -31,7 +31,7 @@ const Footer = () => {
                 </div>
                 <div style={{ marginLeft: "10px" }}>
                   <Link
-                    to="/"
+                    to="/contactus"
                     style={{ color: "white", textDecoration: "none" }}
                   >
                     Contact

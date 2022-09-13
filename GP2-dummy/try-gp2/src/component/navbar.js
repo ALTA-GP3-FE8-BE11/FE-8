@@ -1,15 +1,17 @@
 import React from "react";
 import { Navbar, Container, Nav, Form, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../style/navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCartShopping,
+  faMagnifyingGlass,
   faUserCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import logo from "../assets/logo.png";
 
 const NavbarNav = () => {
+
   return (
     <div>
       <Navbar expand="lg" className="nav-top ">
@@ -43,17 +45,17 @@ const NavbarNav = () => {
                 aria-label="Search"
               />
               <Button variant="secondary" style={{ marginRight: "30px" }}>
-                Search
+                <FontAwesomeIcon icon={faMagnifyingGlass} />
               </Button>
               <Button
                 variant="secondary"
                 className="button-nav"
                 style={{ marginRight: "10px", backgroundColor: "none" }}
               >
-                <FontAwesomeIcon icon={faUserCircle}></FontAwesomeIcon>
+                <Link to='/login'><FontAwesomeIcon icon={faUserCircle} style={{ color: 'white' }}></FontAwesomeIcon></Link>
               </Button>
               <Button variant="secondary">
-                <FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon>
+                <Link to='/mycart'><FontAwesomeIcon icon={faCartShopping} style={{ color: 'white' }}></FontAwesomeIcon></Link>
               </Button>
             </Form>
           </Navbar.Collapse>
