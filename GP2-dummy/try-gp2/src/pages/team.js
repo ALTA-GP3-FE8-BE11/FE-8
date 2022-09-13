@@ -1,13 +1,14 @@
 import React from "react";
 import Navbar from "../component/navbar";
-import Card from "react-bootstrap/Card";
 import Team from "../component/team";
 import Teams2 from "../component/team2";
 import Footer from "../component/footer";
+import "../style/team1.css";
 
 import Jar from "../assets/Jar.jpeg";
-import dwi from "../assets/dwi.jpg";
-import zul from "../assets/zul.jpg";
+import Dwi from "../assets/Dwi.jpg";
+import Zul from "../assets/Zul.jpg";
+import Arif from "../assets/Arif.jpg";
 
 const Teams = () => {
   return (
@@ -15,165 +16,164 @@ const Teams = () => {
       <div style={{ backgroundColor: "#D9D9D9" }}>
         <Navbar />
         <Team />
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-          }}
-        >
-          <Card
-            style={{
-              marginTop: "5vw",
-              marginLeft: "10%",
-              width: "18rem",
-              height: "14rem",
-              border: "0",
-              backgroundColor: "#D9D9D9",
-            }}
-          >
-            <Card.Img
-              style={{
-                marginLeft: "5vw",
-                height: "60%",
-                width: "50%",
-                borderRadius: "20%",
-                textAlign: "center",
-              }}
-              variant="top"
-              src={Jar}
-            />
-            <Card.Body>
-              <Card.Title style={{ marginLeft: "2.5vw" }}>
-                Ganjar Widatama
-              </Card.Title>
-              <Card.Text>
-                Belajar ngoding itu stres, tapi lebih stres ga ngapa-ngapain
-              </Card.Text>
-            </Card.Body>
-          </Card>
-          <Card
-            style={{
-              marginTop: "5vw",
-              marginLeft: "10%",
-              backgroundColor: "#D9D9D9",
-              width: "18rem",
-              height: "14rem",
-              border: "0",
-            }}
-          >
-            <Card.Img
-              style={{
-                marginLeft: "4vw",
-                height: "60%",
-                width: "55%",
-                borderRadius: "20%",
-                textAlign: "center",
-              }}
-              variant="top"
-              src={zul}
-            />
-            <Card.Body>
-              <Card.Title style={{ marginLeft: "2.5vw" }}>
-                Rofifatuz Zulfa
-              </Card.Title>
-              <Card.Text>
-                kerja, kerja, main, tipes, kembali ke kata pertama.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-          <Card
-            style={{
-              marginTop: "5vw",
-              marginLeft: "10%",
-              backgroundColor: "#D9D9D9",
-              width: "18rem",
-              height: "14rem",
-              border: "0",
-            }}
-          >
-            <Card.Img
-              style={{
-                marginLeft: "5vw",
-                height: "60%",
-                width: "50%",
-                borderRadius: "50%",
-                textAlign: "center",
-              }}
-              variant="top"
-              src={Jar}
-            />
-            <Card.Body>
-              <Card.Title style={{ marginLeft: "2.5vw" }}>
-                Ganjar Widatama
-              </Card.Title>
-              <Card.Text>
-                Belajar ngoding itu stres, tapi lebih stres ga ngapa-ngapain
-              </Card.Text>
-            </Card.Body>
-          </Card>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-4">
+              <div className="card p-0">
+                <div className="card-image">
+                  <img src={Jar} alt="" />
+                </div>
+                <div className="card-content d-flex flex-column align-items-center">
+                  <h4 className="pt-2">Ganjar Widatama</h4>
+                  <h5>
+                    belajar ngoding itu stres,tapi lebih stres ga ngapa-ngapain
+                  </h5>
+
+                  <ul className="social-icons d-flex justify-content-center">
+                    <li>
+                      <a href="www.facebook.com">
+                        <span className="fab fa-facebook"></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="www.twitter.com">
+                        <span className="fab fa-twitter"></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="www.instagram.com">
+                        <span className="fab fa-instagram"></span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4">
+              <div className="card p-0">
+                <div className="card-image">
+                  <img src={Zul} alt="" />
+                </div>
+                <div className="card-content d-flex flex-column align-items-center">
+                  <h4 className="pt-2">Rofifatuz Zulfa</h4>
+                  <h5>kerja, kerja, main, tipes, kembali ke kata pertama</h5>
+
+                  <ul className="social-icons d-flex justify-content-center">
+                    <li>
+                      <a href="www.facebook.com">
+                        <span className="fab fa-facebook"></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="www.twitter.com">
+                        <span className="fab fa-twitter"></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="www.instagram.com">
+                        <span className="fab fa-instagram"></span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4">
+              <div className="card p-0">
+                <div className="card-image">
+                  <img src={Arif} alt="" />
+                </div>
+                <div className="card-content d-flex flex-column align-items-center">
+                  <h4 className="pt-2">Arif fiyana</h4>
+                  <h5>jangan ampe jadi bang toyib</h5>
+
+                  <ul className="social-icons d-flex justify-content-center">
+                    <li>
+                      <a href="www.facebook.com">
+                        <span className="fab fa-facebook"></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="www.twitter.com">
+                        <span className="fab fa-twitter"></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="www.instagram.com">
+                        <span className="fab fa-instagram"></span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <Teams2 />
-        <div style={{ display: "flex", flexWrap: "wrap" }}>
-          <Card
-            style={{
-              marginTop: "0vw",
-              marginLeft: "25%",
-              backgroundColor: "#D9D9D9",
-              width: "18rem",
-              height: "14rem",
-              border: "0",
-            }}
-          >
-            <Card.Img
-              style={{
-                marginTop: "2vw",
-                marginLeft: "5vw",
-                height: "70%",
-                width: "60%",
-                borderRadius: "20%",
-                textAlign: "center",
-              }}
-              variant="top"
-              src={dwi}
-            />
-            <Card.Body>
-              <Card.Title style={{ marginLeft: "2.5vw" }}>
-                Muh Dwi Arifianto
-              </Card.Title>
-              <Card.Text>Jangan menyerah sebelum hari deadline</Card.Text>
-            </Card.Body>
-          </Card>
-          <Card
-            style={{
-              marginTop: "2vw",
-              marginLeft: "10%",
-              marginBottom: "5vw",
-              backgroundColor: "#D9D9D9",
-              width: "18rem",
-              height: "14rem",
-              border: "0",
-            }}
-          >
-            <Card.Img
-              style={{
-                marginLeft: "5vw",
-                height: "60%",
-                width: "50%",
-                borderRadius: "50%",
-                textAlign: "center",
-              }}
-              variant="top"
-              src={Jar}
-            />
-            <Card.Body>
-              <Card.Title style={{ marginLeft: "2.5vw" }}>
-                Ganjar Widatama
-              </Card.Title>
-              <Card.Text>
-                Belajar ngoding itu stres, tapi lebih stres ga ngapa-ngapain
-              </Card.Text>
-            </Card.Body>
-          </Card>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6">
+              <div className="card p-0">
+                <div className="card-image">
+                  <img src={Dwi} alt="" />
+                </div>
+                <div className="card-content d-flex flex-column align-items-center">
+                  <h4 className="pt-2">Muh Dwi Arifianto</h4>
+                  <h5>jangan menyerah sebelum hari deadline</h5>
+
+                  <ul className="social-icons d-flex justify-content-center">
+                    <li>
+                      <a href="www.facebook.com">
+                        <span className="fab fa-facebook"></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="www.twitter.com">
+                        <span className="fab fa-twitter"></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="www.instagram.com">
+                        <span className="fab fa-instagram"></span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div className="card p-0">
+                <div className="card-image">
+                  <img
+                    src="https://via.placeholder.com/500x750.png/000000/FFFFFF/%20C/O%20https://placeholder.com/?text=Farhan"
+                    alt=""
+                  />
+                </div>
+                <div className="card-content d-flex flex-column align-items-center">
+                  <h4 className="pt-2">Rofifatuz Zulfa</h4>
+                  <h5>kerja, kerja, main, tipes, kembali ke kata pertama</h5>
+
+                  <ul className="social-icons d-flex justify-content-center">
+                    <li>
+                      <a href="www.facebook.com">
+                        <span className="fab fa-facebook"></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="www.twitter.com">
+                        <span className="fab fa-twitter"></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="www.instagram.com">
+                        <span className="fab fa-instagram"></span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <Footer />

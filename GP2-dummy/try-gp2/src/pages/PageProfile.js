@@ -6,7 +6,7 @@ import logoGoogle from "../assets/google.png";
 import logoFacebook from "../assets/facebook.png";
 import logoTwitter from "../assets/twitter.png";
 
-import sepatu from "../assets/sepatu.png";
+import Defaultpp from "../assets/Defaultpp.jpg";
 
 const PageProfile = () => {
   return (
@@ -14,12 +14,16 @@ const PageProfile = () => {
       <NavbarNav />
       <div style={{ backgroundColor: "#DCDCDC" }}>
         <Row>
-          <Col md={6}>
-            <h1 className="text-center mt-5">My Profile</h1>
-            <Card.Img src={sepatu} className="p-3 mt-4" />
+          <Col md={5}>
+            <h1 className="text-center mt-1">My Profile</h1>
+            <Card.Img
+              src={Defaultpp}
+              className="p-1  mt-1"
+              style={{ height: "37.722vw" }}
+            />
           </Col>
 
-          <Col md={6}>
+          <Col md={7}>
             <div className="container d-flex justify-content-center">
               <div
                 className="bg-light p-5"
@@ -37,9 +41,9 @@ const PageProfile = () => {
                   <ListGroup.Item></ListGroup.Item>
                 </ListGroup>
                 <div className="d-flex justify-content-center mt-5 gap-5 pb-5">
-                  <img src={logoFacebook} width="30px" />
-                  <img src={logoTwitter} width="30px" />
-                  <img src={logoGoogle} width="30px" />
+                  <img src={logoFacebook} alt="" width="30px" />
+                  <img src={logoTwitter} alt="" width="30px" />
+                  <img src={logoGoogle} alt="" width="30px" />
                 </div>
               </div>
             </div>
