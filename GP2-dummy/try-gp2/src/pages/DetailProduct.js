@@ -5,14 +5,19 @@ import NavbarNav from "../component/navbar";
 import sepatu from "../assets/sepatu.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const DetailProduct = () => {
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
   return (
     <div>
       <NavbarNav />
       <div style={{ backgroundColor: "#DCDCDC" }}>
         <div
-          className="container p-2 "
+          className="justify-content-center"
           style={{ display: "flex", flexWrap: "wrap" }}
         >
           <div className="bg-white w-75" style={{ borderRadius: "0px" }}>
@@ -34,7 +39,7 @@ const DetailProduct = () => {
               >
                 <Row className="pt-3">
                   <Col className="d-flex justify-content-center p-1">
-                    <h6>Rp. 600.000</h6>
+                    <h6>Rp. {location.state.price}</h6>
                   </Col>
                   <Col className="d-flex justify-content-center">
                     <div style={{ textAlign: "right", padding: "2px" }}>
@@ -50,11 +55,11 @@ const DetailProduct = () => {
                     paddingTop: "20px",
                   }}
                 >
-                  <h2> NIKE </h2>
+                  <h2>{location.state.title}</h2>
                   <hr />
-                  <p>Bahan : kulit asli</p>
-                  <p>Warna : hitam, coklat</p>
-                  <p>Ukuran : 36, 37, 38, 39, 40, 41, 42</p>
+                  <p>Brand : {location.state.brand}</p>
+                  <p>Warna : {location.state.warna}</p>
+                  <p>Ukuran : {location.state.size}</p>
                 </Row>
 
                 <Row className="d-flex justify-content-center pt-5">
@@ -73,7 +78,9 @@ const DetailProduct = () => {
               </Col>
 
               <Col md={6}>
-                <Card.Img src={sepatu} className="p-3 mt-4" />
+                <div style={{ height: '450px' }}>
+                  <Card.Img src={location.state.image} style={{ height: '450px', objectFit: 'fill' }} />
+                </div>
               </Col>
             </Row>
           </div>

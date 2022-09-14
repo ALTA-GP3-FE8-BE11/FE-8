@@ -5,6 +5,8 @@ import logoFacebook from "../assets/facebook.png";
 import logoTwitter from "../assets/twitter.png";
 
 const Signup = () => {
+
+
   return (
     <div
       style={{
@@ -27,6 +29,7 @@ const Signup = () => {
               type="username"
               placeholder="Create username"
               style={{ width: "300px" }}
+            // onChange={}
             />
             <Form.Control
               type="email"
