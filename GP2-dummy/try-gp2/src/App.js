@@ -10,6 +10,7 @@ import PageProfile from "./pages/PageProfile";
 import Product from "./pages/Product";
 import Signup from "./pages/Signup";
 import Teams from "./pages/team";
+import Try from "./pages/Try";
 
 function App() {
   return (

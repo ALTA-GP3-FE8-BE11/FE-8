@@ -25,7 +25,7 @@ const NavbarNav = () => {
             <Nav className="me-auto d-flex gap-3">
               <Link
                 className="text-decoration-none text-white  "
-                style={{ marginLeft: "10vw", fontSize: "2vw" }}
+                style={{ marginLeft: "10vw", fontSize: "1.7vw" }}
                 to="/"
               >
                 Home
@@ -33,7 +33,7 @@ const NavbarNav = () => {
               <Link
                 to="/Product"
                 className="text-decoration-none text-white"
-                style={{ fontSize: "2vw" }}
+                style={{ fontSize: "1.7vw" }}
               >
                 Product
               </Link>
