@@ -74,6 +74,7 @@ const Product = () => {
       file_image: gambar,
       deskripsi: deskripsi,
     };
+
     // console.log(data)
 
     var config = {
@@ -84,6 +85,7 @@ const Product = () => {
         "Content-Type": "application/json",
       },
       data: data,
+
     };
 
     axios(config)
