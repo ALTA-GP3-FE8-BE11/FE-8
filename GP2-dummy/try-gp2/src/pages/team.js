@@ -6,8 +6,8 @@ import Footer from "../component/footer";
 import "../style/team1.css";
 
 import Jar from "../assets/Jar.jpeg";
-import Dwi from "../assets/Dwi.jpg";
-import Zul from "../assets/Zul.jpg";
+import Dwi from "../assets/dwi.jpg";
+import Zul from "../assets/zul.jpg";
 import Arif from "../assets/Arif.jpg";
 
 const Teams = () => {

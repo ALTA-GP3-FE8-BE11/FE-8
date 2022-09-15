@@ -6,93 +6,103 @@ import NavbarNav from "../component/navbar";
 import { Link, useNavigate } from "react-router-dom";
 import "../style/productpage.css";
 import axios from "axios";
+import ModProd from "../component/mod-prod";
 
 const baseImage =
-  "https://i.scdn.co/image/ab6761610000e5eb5704a64f34fe29ff73ab56bb";
+    "https://i.scdn.co/image/ab6761610000e5eb5704a64f34fe29ff73ab56bb";
 
 const Product = () => {
-  const navigate = useNavigate();
-  const [products, setProducts] = useState([]);
+    const navigate = useNavigate();
+    const [products, setProducts] = useState([]);
 
-  const handleDetailPage = (item) => {
-    navigate("/detailproduct", {
-      state: {
-        image: item.file_image,
-        title: item.nama_produk,
-        size: item.ukuran,
-        warna: item.warna,
-        price: item.harga,
-        brand: item.merk,
-      },
-    });
-  };
-
-  const getData = async () => {
-    var axios = require("axios");
-    var config = {
-      method: "get",
-      url: "http://52.25.13.136:80/products",
-      headers: {
-        "Content-Type": "application/json",
-      },
+    const handleDetailPage = (item) => {
+        navigate("/detailproduct", {
+            state: {
+                image: item.file_image,
+                title: item.nama_produk,
+                size: item.ukuran,
+                warna: item.warna,
+                price: item.harga,
+                brand: item.merk,
+            },
+        });
     };
-    axios(config)
-      .then(function (response) {
-        console.log(JSON.stringify(response.data));
-        setProducts(response.data.Data);
-        console.log(response.data.Data.id);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  };
 
-  useEffect(() => {
-    getData();
-  }, []);
+    const getData = async () => {
+        var axios = require("axios");
+        var config = {
+            method: "get",
+            url: "http://52.25.13.136:80/products",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        };
+        axios(config)
+            .then(function (response) {
+                console.log(JSON.stringify(response.data));
+                setProducts(response.data.Data);
+                console.log(response.data.Data.id);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    };
 
-  return (
-    <div>
-      <NavbarNav />
-      <div className="d-flex justify-content-end px-5 pt-3">
-        <Link to="/historyCart">
-          <Button className="mx-1" variant="secondary">
-            History Cart
-          </Button>
-        </Link>
-        <Link to="/historyCart">
-          <Button variant="secondary">History Cart</Button>
-        </Link>
-      </div>
-      <div className="container-fluid d-flex gap-3 p-3">
-        <Row className="w-100 pb-3 pt-3">
-          <Col xs={12} md="2">
-            <div className="pb-3">
-              <ListGroup>
-                <ListGroup.Item>Pria</ListGroup.Item>
-                <ListGroup.Item>Wanita</ListGroup.Item>
-              </ListGroup>
+    useEffect(() => {
+        getData();
+    }, []);
+
+    // show add product
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+    return (
+        <div>
+            <NavbarNav />
+            <div className="d-flex justify-content-end px-5 pt-3">
+
+                <Button className="mx-1" variant="secondary" onClick={handleShow}>
+                    Add Product
+                </Button>
+
+                <ModProd
+                    show={show}
+                    handleClose={handleClose}
+                />
+                <Link to="/historyCart">
+                    <Button variant="secondary">History Cart</Button>
+                </Link>
             </div>
-          </Col>
-          <Col xs={12} md="10">
-            <div className="d-flex flex-wrap justify-content-center gap-3 container-content">
-              {products.map((item) => {
-                return (
-                  <Cards
-                    image={item.file_image}
-                    title={item.nama_produk}
-                    harga={item.harga}
-                    handleDetailPage={() => handleDetailPage(item)}
-                  />
-                );
-              })}
+            <div className="container-fluid d-flex gap-3 p-3">
+                <Row className="w-100 pb-3 pt-3">
+                    <Col xs={12} md="2">
+                        <div className="pb-3">
+                            <ListGroup>
+                                <ListGroup.Item>Pria</ListGroup.Item>
+                                <ListGroup.Item>Wanita</ListGroup.Item>
+                            </ListGroup>
+                        </div>
+                    </Col>
+                    <Col xs={12} md="10">
+                        <div className="d-flex flex-wrap justify-content-center gap-3 container-content">
+                            {products.map((item) => {
+                                return (
+                                    <Cards
+                                        image={item.file_image}
+                                        title={item.nama_produk}
+                                        harga={item.harga}
+                                        handleDetailPage={() => handleDetailPage(item)}
+                                    />
+                                );
+                            })}
+                        </div>
+                    </Col>
+                </Row>
             </div>
-          </Col>
-        </Row>
-      </div>
-      <Footer />
-    </div>
-  );
+            <Footer />
+        </div>
+    );
 };
 
 export default Product;

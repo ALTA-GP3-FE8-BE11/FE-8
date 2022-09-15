@@ -5,8 +5,8 @@ import NavbarNav from "../component/navbar";
 import logoGoogle from "../assets/google.png";
 import logoFacebook from "../assets/facebook.png";
 import logoTwitter from "../assets/twitter.png";
-
 import Defaultpp from "../assets/Defaultpp.jpg";
+import "../style/pageprofile.css";
 
 const PageProfile = () => {
   return (
@@ -27,7 +27,7 @@ const PageProfile = () => {
             <div className="container d-flex justify-content-center">
               <div
                 className="bg-light p-5"
-                style={{ width: "600px", height: "80vh" }}
+                style={{ width: "600px", height: "85vh" }}
               >
                 <ListGroup
                   variant="flush"
@@ -44,6 +44,15 @@ const PageProfile = () => {
                   <img src={logoFacebook} alt="" width="30px" />
                   <img src={logoTwitter} alt="" width="30px" />
                   <img src={logoGoogle} alt="" width="30px" />
+                </div>
+                <div className="pb-3">
+                  <a href="#" class="cta">
+                    <span>Log Out</span>
+                    <svg width="13px" height="10px" viewBox="0 0 13 10">
+                      <path d="M1,5 L11,5"></path>
+                      <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
