@@ -11,19 +11,19 @@ import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 
 const PageProfile = () => {
-
   const [profil, setProfil] = useState([]);
-  const [cookies, setCookies, removeCookies] = useCookies();
+  const [cookies, removeCookies] = useCookies();
   const navigate = useNavigate();
 
   const getProfil = () => {
-    var axios = require('axios');
+    var axios = require("axios");
 
     var config = {
-      method: 'get',
-      url: 'http://52.25.13.136:80/users',
+      method: "get",
+      url: "http://52.25.13.136:80/users",
       headers: {
-        'Authorization': `Bearer ${cookies.Token}`
+        Authorization: `Bearer ${cookies.Token}`,
+        "Content-Type": "application/json",
       },
     };
 
@@ -31,23 +31,23 @@ const PageProfile = () => {
       .then(function (response) {
         console.log(JSON.stringify(response.data));
         setProfil(response.data.Data);
-        console.log(profil)
+        console.log(profil);
       })
       .catch(function (error) {
         console.log(error);
       });
-  }
+  };
 
   useEffect(() => {
     getProfil();
-  }, [])
+  }, []);
 
   const handleRemoveCookie = () => {
-    removeCookies("Email")
-    removeCookies("Password")
-    alert('anda sudah logout')
-    navigate('/login')
-  }
+    removeCookies("Email");
+    removeCookies("Password");
+    alert("anda sudah logout");
+    navigate("/login");
+  };
 
   return (
     <div>

@@ -41,11 +41,10 @@ const Login = () => {
     axios(config)
       .then(function (response) {
         console.log(response.data.Data);
-        setCookies("Email", email, { path: "/" })
-        setCookies("Password", password, { path: "/" })
-        setCookies("Token", response.data.Data, { path: "/" })
+        setCookies("Email", email, { path: "/" });
+        setCookies("Password", password, { path: "/" });
+        setCookies("Token", response.data.Data, { path: "/" });
         homeless();
-
       })
       .catch(function (error) {
         mbakzul();
@@ -96,7 +95,12 @@ const Login = () => {
             <button
               variant="secondary"
               onClick={() => HandleLogin()}
-              style={{ width: "100px", border: '1px solid gray', color: '#00001F', borderRadius: '5px' }}
+              style={{
+                width: "100px",
+                border: "1px solid gray",
+                color: "#00001F",
+                borderRadius: "5px",
+              }}
             >
               Login
             </button>
