@@ -7,6 +7,7 @@ import {
   faCartShopping,
   faMagnifyingGlass,
   faUserCircle,
+  faRightToBracket
 } from "@fortawesome/free-solid-svg-icons";
 import logo from "../assets/logo.png";
 
@@ -54,6 +55,14 @@ const NavbarNav = () => {
                 style={{ marginRight: "10px", backgroundColor: "none" }}
               >
                 <Link to="/login">
+                  <FontAwesomeIcon
+                    icon={faRightToBracket}
+                    style={{ color: "white" }}
+                  ></FontAwesomeIcon>
+                </Link>
+              </Button>
+              <Button variant="secondary" style={{ marginRight: "10px", backgroundColor: "none" }}>
+                <Link to="/pageprofile">
                   <FontAwesomeIcon
                     icon={faUserCircle}
                     style={{ color: "white" }}

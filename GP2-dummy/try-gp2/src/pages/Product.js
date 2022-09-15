@@ -74,16 +74,15 @@ const Product = () => {
             file_image: gambar,
             deskripsi: deskripsi,
         };
-        // console.log(data)
+        console.log(data)
 
         var config = {
             method: "post",
             url: "http://52.25.13.136:80/products",
             headers: {
-                Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NjMyNzgwNDgsInVzZXJJZCI6Mzh9.haWrjIW6qxQH0cr9-oWjamPSNG0pcBHCfKHDFeeanqM',
-                'Content-Type': 'application/json'
+                Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NjMyNzgwNDgsInVzZXJJZCI6Mzh9.haWrjIW6qxQH0cr9-oWjamPSNG0pcBHCfKHDFeeanqM'
             },
-            data: data,
+            data: data
         };
 
         axios(config)

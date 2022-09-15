@@ -69,8 +69,6 @@ const Signup = () => {
     <div
       style={{
         backgroundColor: "#DCDCDC",
-        paddingTop: "90px",
-        paddingBottom: "90px",
       }}
     >
       <div className="container d-flex justify-content-center">
