@@ -27,7 +27,7 @@ const ModProd = ({
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form>
+          <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Control
                 type="text"
@@ -87,14 +87,14 @@ const ModProd = ({
                 onChange={(value) => handleDeskripsi(value)}
               />
             </Form.Group>
+
           </Form>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="primary" onClick={handleSubmit}>
+          <button onClick={handleSubmit} variant="primary">
             Add Product
-          </Button>
-        </Modal.Footer>
+          </button>
+        </Modal.Body>
       </Modal>
+
     </div>
   );
 };
