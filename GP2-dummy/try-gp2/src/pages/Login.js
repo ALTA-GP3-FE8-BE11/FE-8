@@ -6,11 +6,13 @@ import { Link } from "react-router-dom";
 import logoGoogle from "../assets/google.png";
 import logoFacebook from "../assets/facebook.png";
 import logoTwitter from "../assets/twitter.png";
+import { useCookies } from "react-cookie";
 
 const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [cookies, setCookies] = useCookies();
 
   const homeless = () => {
     navigate("/pageprofile");
@@ -39,7 +41,11 @@ const Login = () => {
     axios(config)
       .then(function (response) {
         console.log(response.data.Data);
+        setCookies("Email", email, { path: "/" })
+        setCookies("Password", password, { path: "/" })
+        setCookies("Token", response.data.Data, { path: "/" })
         homeless();
+
       })
       .catch(function (error) {
         mbakzul();
