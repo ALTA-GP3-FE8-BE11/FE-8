@@ -56,6 +56,11 @@ const Product = () => {
       <NavbarNav />
       <div className="d-flex justify-content-end px-5 pt-3">
         <Link to="/historyCart">
+          <Button className="mx-1" variant="secondary">
+            History Cart
+          </Button>
+        </Link>
+        <Link to="/historyCart">
           <Button variant="secondary">History Cart</Button>
         </Link>
       </div>
