@@ -2,13 +2,11 @@ import React from "react";
 import { Col, Row, Card, Button } from "react-bootstrap";
 import Footer from "../component/footer";
 import NavbarNav from "../component/navbar";
-import sepatu from "../assets/sepatu.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const DetailProduct = () => {
-
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -78,8 +76,11 @@ const DetailProduct = () => {
               </Col>
 
               <Col md={6}>
-                <div style={{ height: '450px' }}>
-                  <Card.Img src={location.state.image} style={{ height: '450px', objectFit: 'fill' }} />
+                <div style={{ height: "450px" }}>
+                  <Card.Img
+                    src={location.state.image}
+                    style={{ height: "450px", objectFit: "fill" }}
+                  />
                 </div>
               </Col>
             </Row>

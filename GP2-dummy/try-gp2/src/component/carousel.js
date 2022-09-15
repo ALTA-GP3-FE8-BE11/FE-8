@@ -1,7 +1,6 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 import sepatu from "../assets/sepatu.png";
-
 const Carousels = () => {
   return (
     <Carousel>

@@ -11,6 +11,7 @@ const Signup = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [alamat, setAlamat] = useState("");
 
   const handleSignup = () => {
     handleSignin();
@@ -28,6 +29,7 @@ const Signup = () => {
       nama_user: username,
       email: email,
       password: password,
+      alamat: alamat,
     });
 
     var config = {
@@ -59,12 +61,14 @@ const Signup = () => {
     setPassword(event.target.value);
   };
 
+  const handleAlamat = (event) => {
+    setAlamat(event.target.value);
+  };
+
   return (
     <div
       style={{
         backgroundColor: "#DCDCDC",
-        paddingTop: "90px",
-        paddingBottom: "90px",
       }}
     >
       <div className="container d-flex justify-content-center">
@@ -82,7 +86,6 @@ const Signup = () => {
               placeholder="Create username"
               onChange={handleUsername}
               style={{ width: "300px" }}
-              // onChange={}
             />
             <Form.Control
               type="email"
@@ -94,6 +97,12 @@ const Signup = () => {
               type="password"
               placeholder="Password"
               onChange={handlePassword}
+            />
+            <Form.Control
+              type="text"
+              placeholder="Address"
+              onChange={handleAlamat}
+              style={{ width: "300px" }}
             />
             <div className="mx-auto">
               <button

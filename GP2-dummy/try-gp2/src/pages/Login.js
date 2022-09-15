@@ -6,11 +6,13 @@ import { Link } from "react-router-dom";
 import logoGoogle from "../assets/google.png";
 import logoFacebook from "../assets/facebook.png";
 import logoTwitter from "../assets/twitter.png";
+import { useCookies } from "react-cookie";
 
 const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [cookies, setCookies] = useCookies();
 
   const homeless = () => {
     navigate("/pageprofile");
@@ -39,7 +41,11 @@ const Login = () => {
     axios(config)
       .then(function (response) {
         console.log(response.data.Data);
+        setCookies("Email", email, { path: "/" })
+        setCookies("Password", password, { path: "/" })
+        setCookies("Token", response.data.Data, { path: "/" })
         homeless();
+
       })
       .catch(function (error) {
         mbakzul();
@@ -59,8 +65,6 @@ const Login = () => {
     <div
       style={{
         backgroundColor: "#DCDCDC",
-        paddingTop: "90px",
-        paddingBottom: "90px",
       }}
     >
       <div className="container d-flex justify-content-center">
@@ -86,14 +90,15 @@ const Login = () => {
             />
             <div className="mx-auto"></div>
           </Form>
-
-          <button
-            variant="secondary"
-            onClick={() => HandleLogin()}
-            style={{ width: "100px" }}
-          >
-            Login
-          </button>
+          <div className="d-flex justify-content-center">
+            <button
+              variant="secondary"
+              onClick={() => HandleLogin()}
+              style={{ width: "100px", border: '1px solid gray', color: '#00001F', borderRadius: '5px' }}
+            >
+              Login
+            </button>
+          </div>
           <div className="d-flex justify-content-center pt-3 gap-5 pb-5">
             <img src={logoFacebook} alt="" width="30px" />
             <img src={logoTwitter} alt="" width="30px" />
