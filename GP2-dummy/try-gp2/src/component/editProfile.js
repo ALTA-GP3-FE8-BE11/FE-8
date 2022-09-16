@@ -20,7 +20,7 @@ const EditProfile = ({
             >
                 <Modal.Header closeButton>
                     <Modal.Title style={{ textAlign: "center" }}>
-                        TAMBAH PRODUK
+                        EDIT PROFIL
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
@@ -58,9 +58,14 @@ const EditProfile = ({
                             />
                         </Form.Group>
                     </Form>
-                    <button variant="primary" onClick={handleSubmit}>
-                        Add Product
-                    </button>
+                    <div className='d-flex justify-content-end'>
+                        <button onClick={handleSubmit}
+                            style={{ padding: '5px', border: '1px solid gray', borderRadius: '8px' }}
+                        >
+                            Edit Profil
+                        </button>
+                    </div>
+
                 </Modal.Body>
             </Modal>
         </div>
