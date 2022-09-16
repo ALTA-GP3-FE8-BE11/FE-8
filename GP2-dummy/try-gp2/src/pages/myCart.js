@@ -1,17 +1,46 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import Footer from "../component/footer";
 import NavbarNav from "../component/navbar";
-
+import { useCookies } from "react-cookie";
 import Cart from "../component/cart";
 import Checkout from "../component/checkout";
 import ModalMod from "../component/modal";
 
 const MyCart = () => {
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const [cookies, setCookies, removeCookies] = useCookies();
+  const [cart, setCart] = useState([]);
+
+  // get all product in cart
+  const getCart = () => {
+    var axios = require('axios');
+    var data = '';
+
+    var config = {
+      method: 'get',
+      url: 'http://52.25.13.136:80/carts',
+      headers: {
+        'Authorization': `Bearer ${cookies.Token}`
+      },
+      data: data
+    };
+
+    axios(config)
+      .then(function (response) {
+        console.log(JSON.stringify(response.data));
+        setCart(response.data.Data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
+  useEffect(() => {
+    getCart();
+  }, [])
 
   return (
     <div>
@@ -22,7 +51,18 @@ const MyCart = () => {
           <Row>
             <Col md={12} lg="8">
               <div>
-                <Cart />
+                {cart.map((item) => {
+                  return (
+                    <Cart
+                      image={item.file_image}
+                      title={item.nama_produk}
+                      size={item.ukuran}
+                      brand={item.merk}
+                      harga={item.harga}
+                      id={item.id}
+                    />
+                  )
+                })}
               </div>
             </Col>
             <Col md={12} lg="4">

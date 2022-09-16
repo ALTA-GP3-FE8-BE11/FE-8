@@ -4,7 +4,7 @@ import sepatu from "../assets/sepatu.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 
-const Cart = () => {
+const Cart = ({ image, title, size, brand, harga, id }) => {
   return (
     <div>
       <Table responsive>
@@ -21,15 +21,15 @@ const Cart = () => {
           <tr>
             <td style={{ width: "35%" }}>
               <img
-                src={sepatu}
+                src={image}
                 alt=""
                 style={{ width: "100%", objectFit: "cover" }}
               />
             </td>
             <td className="w-25">
-              <h5 className="pb-2">Sneakers Aventador</h5>
-              <p>Size : 40</p>
-              <p>Brand : Sneakers</p>
+              <h5 className="pb-2">{title}</h5>
+              <p>Size : {size}</p>
+              <p>Brand : {brand}</p>
             </td>
             <td>
               <div className="d-flex justify-content-center">
@@ -44,36 +44,7 @@ const Cart = () => {
               </div>
             </td>
             <td>
-              <p>Rp 6.000.000</p>
-            </td>
-          </tr>
-          <tr>
-            <td style={{ width: "35%" }}>
-              <img
-                src={sepatu}
-                alt=""
-                style={{ width: "100%", objectFit: "cover" }}
-              />
-            </td>
-            <td className="w-25">
-              <h5 className="pb-2">Sneakers Aventador</h5>
-              <p>Size : 40</p>
-              <p>Brand : Sneakers</p>
-            </td>
-            <td>
-              <div className="d-flex justify-content-center">
-                <Button className="w-75 text-center" variant="secondary">
-                  Buy
-                </Button>
-              </div>
-            </td>
-            <td>
-              <div>
-                <FontAwesomeIcon icon={faTrashAlt}></FontAwesomeIcon>
-              </div>
-            </td>
-            <td>
-              <p>Rp 6.000.000</p>
+              <p>{harga}</p>
             </td>
           </tr>
         </tbody>
