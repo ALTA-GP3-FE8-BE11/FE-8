@@ -2,7 +2,6 @@ import React from "react";
 import { Card, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-import sepatu from "../assets/sepatu.png";
 
 const Cards = ({ title, harga, image, handleDetailPage }) => {
   return (
@@ -18,18 +17,21 @@ const Cards = ({ title, harga, image, handleDetailPage }) => {
             </div>
           </Card.Text>
         </Card.Body>
-        <button
-          variant="primary"
-          style={{
-            width: "100%",
-            color: "whitesmoke",
-            backgroundColor: "gray",
-            borderColor: "gray",
-          }}
-          onClick={handleDetailPage}
-        >
-          Product Details
-        </button>
+        <div className="d-flex justify-content-center pb-3">
+          <button
+            variant="primary"
+            style={{
+              width: "75%",
+              color: "whitesmoke",
+              backgroundColor: "gray",
+              border: '1px solid gray',
+              borderRadius: '8px'
+            }}
+            onClick={handleDetailPage}
+          >
+            Product Details
+          </button>
+        </div>
       </Card>
     </div>
   );
