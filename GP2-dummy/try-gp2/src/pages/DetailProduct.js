@@ -1,14 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import { Col, Row, Card, Button } from "react-bootstrap";
 import Footer from "../component/footer";
 import NavbarNav from "../component/navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useCookies } from "react-cookie";
 
 const DetailProduct = () => {
   const location = useLocation();
   const navigate = useNavigate();
+
+  // add to cart
+  const [productId, setProductId] = useState();
+  const [cookies, setCookies, removeCookies] = useCookies();
+
+  const handleToCart = () => {
+    var axios = require('axios');
+    var data = {
+      product_id: location.state.id
+    };
+    console.log(data)
+    var config = {
+      method: 'post',
+      url: 'http://52.25.13.136:80/carts',
+      headers: {
+        'Authorization': `Bearer ${cookies.Token}`,
+        'Content-Type': 'application/json'
+      },
+      data: data
+    };
+
+    axios(config)
+      .then(function (response) {
+        console.log(JSON.stringify(response.data));
+        console.log(location.state.id)
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
 
   return (
     <div>
@@ -58,10 +89,11 @@ const DetailProduct = () => {
                   <p>Brand : {location.state.brand}</p>
                   <p>Warna : {location.state.warna}</p>
                   <p>Ukuran : {location.state.size}</p>
+                  <p>ID : {location.state.id}</p>
                 </Row>
 
                 <Row className="d-flex justify-content-center pt-5">
-                  <Button className="w-50 mb-2" variant="secondary">
+                  <Button className="w-50 mb-2" variant="secondary" onClick={() => handleToCart()}>
                     Tambah
                   </Button>
                 </Row>
