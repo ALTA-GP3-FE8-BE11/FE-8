@@ -41,6 +41,15 @@ const DetailProduct = () => {
       });
   }
 
+  const goToCart = () => {
+    navigate('/mycart')
+  }
+
+  const handleToBuy = () => {
+    handleToCart();
+    goToCart();
+  }
+
   return (
     <div>
       <NavbarNav />
@@ -89,7 +98,6 @@ const DetailProduct = () => {
                   <p>Brand : {location.state.brand}</p>
                   <p>Warna : {location.state.warna}</p>
                   <p>Ukuran : {location.state.size}</p>
-                  <p>ID : {location.state.id}</p>
                 </Row>
 
                 <Row className="d-flex justify-content-center pt-5">
@@ -101,6 +109,7 @@ const DetailProduct = () => {
                   <Button
                     className="w-50 d-flex justify-content-center"
                     variant="secondary"
+                    onClick={() => handleToBuy()}
                   >
                     Beli
                   </Button>

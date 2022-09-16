@@ -9,6 +9,7 @@ import Jar from "../assets/Jar.jpeg";
 import Dwi from "../assets/dwi.jpg";
 import Zul from "../assets/zul.jpg";
 import Arif from "../assets/Arif.jpg";
+import Farhan from "../assets/farhan.jpg";
 
 const Teams = () => {
   return (
@@ -145,13 +146,13 @@ const Teams = () => {
               <div className="card p-0">
                 <div className="card-image">
                   <img
-                    src="https://via.placeholder.com/500x750.png/000000/FFFFFF/%20C/O%20https://placeholder.com/?text=Farhan"
+                    src={Farhan}
                     alt=""
                   />
                 </div>
                 <div className="card-content d-flex flex-column align-items-center">
-                  <h4 className="pt-2">Rofifatuz Zulfa</h4>
-                  <h5>kerja, kerja, main, tipes, kembali ke kata pertama</h5>
+                  <h4 className="pt-2">Raora Farhan Al Abrar</h4>
+                  <h5>Jika kau lapar, makanlah</h5>
 
                   <ul className="social-icons d-flex justify-content-center">
                     <li>
